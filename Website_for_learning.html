@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Title</title>
+        <style> /* 好多新嘅properties 唔inherit*/
+            body{
+                font-size: 13px /* 13pixel */
+            }
+            h1{
+                color: rgb(100,20,10); /* max255 */
+                background-color:green;
+                font-size: 2em; /* relative size, here is 2 times the body size*/
+            }
+            #usefulLink{
+                float: right; /* can move left or right */
+                width: 30%; /* set佢fix幾闊 */
+                clear: both; /* use when overlap */
+            }
+            #styleById{ /* 用# */
+                color: red; 
+                font-family: "Helvetica", sans-serif; /* specific font後面最好攞個family name做backup*/
+                /*look more handwritten: cursive */
+                /*fancier: fantasy*/
+                /*like typewriter(fixed width): monospace */
+            } 
+            .styleByClass{ /* 用. */ /* 同class就會改 */
+                color: blue
+            }
+            .bold{ /* prevent the abuse of <strong> */
+                font-weight: bold
+            }
+            .italic{ /* prevent abuse of <em> */
+                font-style: italic
+            }
+            #span{
+                color:red;
+            }
+            #div{
+                background-color: rgb(230,230,230);
+                width: 200px; /* 可以用 %, */
+                height: 100px; 
+                overflow: auto;
+                /* visible: 由佢出界;
+                    hidden: 出界果d收埋;
+                    auto: 自動加scroll bar;
+                */
+                /* 想只要x-axis 或者 y-axis嘅scroll bar
+                    overflow-x: auto;
+                    overflow-y: hidden;
+                */
+            }
+            #tryCSSPara{
+                text-decoration: underline;
+                line-height: 1.5em;
+                text-align: center;
+            }
+            .testBox{
+                margin: 15px;
+                /* -每邊唔同(由頂順時針): 15px 0px 10px 16px; 
+                    若只想改某一兩邊: 
+                    margin-right: 15px;
+                    margin-bottom: 15px;
+                */
+                border: 3px dotted red; /* thickness, style, color*/
+                border-top: 6px solid blue; 
+                padding: 15px;
+            }
+            #doraemon{
+                position: absolute;
+                z-index: 2;
+            }
+            #dorami{
+                position: absolute;
+                left: 200px; /* moved to right */
+                z-index: 2;
+            }
+            #background{
+                position: relative; 
+                /* absolute: relative to top of the page;
+                    relative: relative to normal position;
+                    fixed: stand at the position of ur screen even u srcoll down;
+                */
+                z-index: 1; /* 排order 越細越底 */
+                height: 200px;
+                margin:10px;
+            }
+            .multipleClasses{
+                position: relative;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1>First heading</h1> <!--from h1 to h6-->
+        
+        <div id=usefulLink>
+            <h3>Useful link</h3>
+            <ul>
+                <li><a href="http://csszengarden.com/">CSS Zen Garden</a></li>
+                <li><a href="https://www.khanacademy.org/computing/computer-programming/html-css/css-layout-properties/a/planning-your-webpage">Wireframes's tools</a></li>
+            </ul>
+        </div>
+
+        <p><a href="#toBottom">To jump to bottom</a></p> <!--如果個webpage太長就用呢個jump落去-->
+        <p>paragraph <br>
+            next line <br>
+            <em>斜</em><strong>粗</strong>
+        </p>
+        
+        <ul>
+            <li>
+                <a href="https://www.kasandbox.org/programming-images/cute/Heart.png">to heart link</a> <!--a用黎整hyperlink-->
+            </li>
+            <li><a>pt 2</a></li>
+            <li><a>pt 3</a></li>
+        </ul>
+
+        <ol>
+            <li id="styleById">style by id</li>
+            <li class="styleByClass">style by class</li>
+        </ol>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Club</th>
+                    <th>Position</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>C.Ronaldo</td>
+                    <td class="bold">Real Madrid</td>
+                    <td class="italic">Forward</td>
+                </tr>
+                <tr>
+                    <td>Wilshere</td>
+                    <td class="bold">Arsenal</td>
+                    <td class="italic">Midfielder</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p id="tryCSSPara">求其整段野出黎 <br>
+        亂up<br>
+        試其他CSS
+        </p>
+
+        <h2>Grouping</h2>
+
+        <p>
+            using <span id="span">span</span> <br> <!--inline-->
+            It is good for grouping text
+        </p>
+
+        <div id="div"> <!--block-->
+        <p>using div </p>
+        <img src="https://vignette4.wikia.nocookie.net/mrmen/images/5/52/Small.gif/revision/latest?cb=20100731114437">
+        <p>It is good for grouping elements </p>
+        </div>
+        
+        <!--There are 2 types of elements. 
+            in-line & block
+            in-line: no new line after it
+            e.g. <img>, <span>
+            block: new line after it 
+            most of HTML tags
+            e.g. heading, paragraph, list, <div> -->
+        <div class="testBox">
+        <h2>Box</h2>
+        <!-- 
+            margin: 透明，用來幫個element擺位
+            border: 邊框
+            padding: 分隔開border and content e.g. 令d內容／d字易睇d
+        -->
+        <img src="https://www.kasandbox.org/programming-images/misc/boxmodel.png">
+        </div>
+        
+        <img id="doraemon" src="https://4.bp.blogspot.com/-Gy-5xLWui24/VzD8M0tBU0I/AAAAAAAA_2k/9BhkfT0ufWQN6MMVugH7Fgi5Z6xrQyyJwCKgB/s1600/05_15_PERSONAJES_WEB_DORAEMON_BRUSH_BOING_DORAEMON.png" alt="Doraemon"> <!-- alt係for backup-->
+        <img id="dorami" src="https://2.bp.blogspot.com/-pnF4Qt8b-1I/VzD8Mwk-ldI/AAAAAAAA_34/xEu2aXliqVoKvewFntojmzfEpu9Q2v2wwCKgB/s1600/05_15_PERSONAJES_WEB_DORAEMON_BRUSH_BOING_DORAMI.png" alt="Dorami">
+        <img id="background" src="https://image.freepik.com/free-vector/nature-background-of-a-grassy-landscape_1048-1305.jpg">
+
+        <p class="bold italic styleByClass">Style by multiple classes</p>
+        <!--共用classes-->
+        <p>指定某件野嘅style(<strong>specific the selector)</strong></p>
+
+        <h6 id="toBottom">Bottom</h6>
+    </body>
+</html>
