@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Title</title>
-        <style> /* 好多新嘅properties 唔inherit*/
+        <style> /* 好多新嘅properties 唔inherit*/ /*CSS selector 睇邊個specfic就用邊個 */ /* 一樣specific 就用排下面果個 */
             body{
                 font-size: 13px /* 13pixel */
             }
@@ -88,8 +88,31 @@
             .multipleClasses{
                 position: relative;
             }
+            .codebox { /* 兩個codebox網上學番來 */
+                /* Below are styles for the codebox (not the code itself) */
+                border:1px solid black;
+                background-color:#EEEEFF;
+                width:300px;
+                overflow:auto;    
+                padding:10px;
+            }
+            .codebox code {
+                /* Styles in here affect the text of the codebox */
+                font-size:0.9em;
+                /* You could also put all sorts of styling here, like different font, color, underline, etc. for the code. */
+            }
+            strong.specificClass{ /* 指定個class叫specificClass嘅strong tag */
+                font-style: italic;
+            }
+            ul .descendant{ /*  用parent tag(再上一個parent都得)黎指定某個class */ /* ul li descendant都得，用黎make sure 係果個 */ /* 亦可以幫個ul加class，更準 */
+                font-size: 50px;
+            }
+            .groupingCSSSelector1, .groupingCSSSelector2{
+                font-size: 20px;
+            }
         </style>
     </head>
+
     <body>
 
         <h1>First heading</h1> <!--from h1 to h6-->
@@ -99,6 +122,11 @@
             <ul>
                 <li><a href="http://csszengarden.com/">CSS Zen Garden</a></li>
                 <li><a href="https://www.khanacademy.org/computing/computer-programming/html-css/css-layout-properties/a/planning-your-webpage">Wireframes's tools</a></li>
+                <li><a href="http://www.webappers.com/2007/09/13/codepress-real-time-syntax-highlighting-editor/">CodePress – Real Time Syntax Highlighting Editor</a></li>
+                <li><a href="http://www.ozzu.com/website-design-forum/how-can-get-html-code-box-site-t68749.html">another code box example</a></li>
+                <li><a href="http://thesquid.ink/flat-icons/?utm_source=webappers&utm_medium=custom&utm_campaign=popup">icon link</a></li>
+                <li><a href="http://validator.w3.org/">To validate website</a></li>
+                <li><a href="http://www.teaching-materials.org/htmlcss-1day/html-forms/slides.html#slide1">HTML Forms</a></li>
             </ul>
         </div>
 
@@ -184,8 +212,37 @@
 
         <p class="bold italic styleByClass">Style by multiple classes</p>
         <!--共用classes-->
-        <p>指定某件野嘅style(<strong>specific the selector)</strong></p>
+        <p>指定某件野嘅style(<strong class="specificClass">specific the selector)</strong> <br>
+        </p>
+
+        <h2>descendant selector</h2>
+        <p><strong class="descendant">abc</strong></p>
+        <ul>
+            <li><strong class="descendant">bcd</strong></li>
+        </ul>
+
+        <h2>grouping of CSS selector</h2>
+        <p class="groupingCSSSelector1">abc</p>
+        <p class="groupingCSSSelector2">bcd</p>
+
+        <h2>Link to Khan 自己睇</h2>
+        <a href="https://www.khanacademy.org/computing/computer-programming/html-css/more-css-selectors/p/css-dynamic-pseudo-classes">pseudo class</a> <br>
+        <a href="https://www.khanacademy.org/computing/computer-programming/html-css/more-ways-to-embed-css/p/using-inline-css-styles">inline CSS</a> <br>
+        <p>有用:</p>
+        <a href="https://www.khanacademy.org/computing/computer-programming/html-css/more-ways-to-embed-css/p/using-external-stylesheets">external stylesheets</a> <br>
+        <a href="https://www.khanacademy.org/computing/computer-programming/html-css/html-css-further-learning/a/webpage-design">tips and trips</a>
+        <a href="https://www.khanacademy.org/computing/computer-programming/html-css/html-css-further-learning/a/html-css-further-learning-what-to-learn-next">What to learn next</a>
+
+        <div class="codebox"> <!--網上學番來 https://stackoverflow.com/questions/5793214/creating-programming-code-box-on-my-website-w-xhtml-css-->
+        <code>   
+            var message = "hello world!";
+            alert(message);
+        </code>
+        </div>
 
         <h6 id="toBottom">Bottom</h6>
+
+        <!--Javascript擺最底-->
+        <script></script> 
     </body>
 </html>
