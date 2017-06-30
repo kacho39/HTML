@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>What I have learnt on HTML</title>
+        <style>
+        	th {
+        		border: 1px solid red;
+        	}
+        	td {
+        		border: 1px solid blue;
+        		padding: 3px;
+        	}
+        	tr {
+        		text-align: center;
+        	}
+        	.noEndTag {
+        		color: brown;
+        	}
+        	.plainTable td {
+        		border: 1px solid white;
+        	}
+        </style>
+    </head>
+    <body>
+    	<h1>What I have learnt on HTML</h1>
+    	<p>Brown: no end tag is need</p>
+    	<h2>Simple tag</h2>
+    	<table>
+    		<thead>
+    			<tr>
+    				<th>&lttag&gt</th>
+    				<th>usage</th>
+    			</tr>
+    		</thead>
+    		<tbody>
+    			<tr>
+    				<td>&lth1&gt to &lth6&gt</td>
+    				<td>headings</td>
+    			</tr>
+    			<tr>
+    				<td>&ltp&gt</td>
+    				<td>paragraph</td>
+    			</tr>
+    			<tr>
+    				<td class="noEndTag">&ltbr&gt</td>
+    				<td>single line break</td>
+    			</tr>
+    			<tr>
+    				<td class="noEndTag">&lthr&gt</td>
+    				<td>horizontal line</td>
+    			</tr>
+    			<tr>
+    				<td class="noEndTag">&lt!--  --&gt</td>
+    				<td>comment</td>
+    			</tr>
+    		</tbody>
+    	</table>
+
+    	<h2>text formatting</h2>
+    	<table>
+    		<thead>
+    			<tr>
+    				<th>&lttag&gt</th>
+    				<th>display</th>
+    			</tr>
+    		</thead>
+    		<tbody>
+    			<tr>
+    				<td>&ltb&gt</td>
+    				<td><b>bold</b></td>
+    			</tr>
+    			<tr>
+    				<td>&lti&gt</td>
+    				<td><i>italic</i></td>
+    			</tr>
+    			<tr>
+    				<td>&ltstrong&gt</td>
+    				<td><strong>indicate it is important</strong></td>
+    			</tr>
+    			<tr>
+    				<td>&ltem&gt</td>
+    				<td><em>emphasized italic</em></td>
+    			</tr>
+    			<tr>
+    				<td>&ltbig&gt</td>
+    				<td><big>big</big></td>
+    			</tr>
+    			<tr>
+    				<td>&ltsmall&gt</td>
+    				<td><small>small</small></td>
+    			</tr>
+    			<tr>
+    				<td>&ltsub&gt</td>
+    				<td><sub>subscripted</sub></td>
+    			</tr>
+    			<tr>
+    				<td>&ltsup&gt</td>
+    				<td><sup>superscripted</sup></td>
+    			</tr>
+    			<tr>
+    				<td>&ltins&gt</td>
+    				<td><ins>inserted</ins></td>
+    			</tr>
+    			<tr>
+    				<td>&ltdel&gt</td>
+    				<td><del>deleted</del></td>
+    			</tr>
+    		</tbody>
+    	</table>
+
+    	<h2>image</h2>
+    	<p class="noEndTag">&ltimg src="image.jpg" alt=""&gt</p>
+
+    	<h2>Link</h2>
+    	<p>&lta href="" target="_blank"&gt&lta&gt</p>
+    	<p><ins>target attribute</ins></p>
+    	<table>
+    		<thead>
+    			<tr>
+    				<th>value</th>
+    				<th>describe</th>
+    			</tr>
+    		</thead>
+    		<tbody>
+    			<tr>
+    				<td>_blank</td>
+    				<td>open in new window or tab</td>
+    			</tr>
+    			<tr>
+    				<td>_self</td>
+    				<td>open in same frame</td>
+    			</tr>
+    			<tr>
+    				<td>_parent</td>
+    				<td>open in parent frame</td>
+    			</tr>
+    			<tr>
+    				<td>_top</td>
+    				<td>open in full body of the window</td>
+    			</tr>
+    			<tr>
+    				<td>framename</td>
+    				<td>open in the named frame</td>
+    			</tr>
+    		</tbody>
+    	</table>
+
+    	<h2>List</h2>
+    	<table class="plainTable">
+    		<tbody>
+    			<tr>
+    				<td>&ltol&gt</td>
+    				<td></td><td></td><td></td><td></td><td rowspan="3" bgcolor="lime">Output: </td>
+    				<td rowspan="3">
+    					<ol>
+    						<li> Ordered List </li>
+    					</ol>
+    				</td>
+    			</tr>
+    			<tr>
+    				<td></td>
+    				<td>&ltli&gt Ordered List</td>
+    				<td>&lt/li&gt</td>
+    			</tr>
+    			<tr>
+    				<td>&lt/ol&gt</td>
+    			</tr>
+    		</tbody>
+    	</table>
+    	<table class="plainTable">
+    		<tbody>
+    			<tr>
+    				<td>&ltul&gt</td>
+    				<td></td><td></td><td rowspan="3" bgcolor="lime">Output: </td>
+    				<td rowspan="3">
+    					<ul>
+    						<li> Ordered List </li>
+    					</ul>
+    				</td>
+    			</tr>
+    			<tr>
+    				<td></td>
+    				<td>&ltli&gt Unordered List</td>
+    				<td>&lt/li&gt</td>
+    			</tr>
+    			<tr>
+    				<td>&lt/ul&gt</td>
+    			</tr>
+    		</tbody>
+    	</table>
+
+    	<h2>Table</h2>
+    	<table class="plainTable">
+    		<tbody>
+    			<tr>
+    				<td>&lttable&gt</td>
+    				<td></td><td></td><td></td><td></td><td rowspan="10" bgcolor="lime">Output: </td>
+    				<td rowspan="10">
+    					<table>
+    						<tr>
+    							<td>x1y1</td>
+    							<td>x2y1</td>
+    						</tr>
+    						<tr>
+    							<td>x1y2</td>
+    							<td>x2y2</td>
+    						</tr>
+    					</table>
+    				</td>
+    			</tr>
+    			<tr>
+    				<td></td><td>&lttr&gt</td>
+    			</tr>
+    			<tr>
+    				<td></td><td></td><td>&lttd&gtx1y1&lt/td&gt</td>
+    			</tr>
+    			<tr>
+    				<td></td><td></td><td>&lttd&gtx2y1&lt/td&gt</td>
+    			</tr>
+    			<tr>
+    				<td></td><td>&lt/tr&gt</td>
+    			</tr>
+    			<tr>
+    				<td></td><td>&lttr&gt</td>
+    			</tr>
+    			<tr>
+    				<td></td><td></td><td>&lttd&gtx1y2&lt/td&gt</td>
+    			</tr>
+    			<tr>
+    				<td></td><td></td><td>&lttd&gtx2y2&lt/td&gt</td>
+    			</tr>
+    			<tr>
+    				<td></td><td>&lt/tr&gt</td>
+    			</tr>
+    			<tr>
+    				<td>&lt/table&gt</td>
+    			</tr>
+    		</tbody>
+    	</table>
+
+    	<h2>Form</h2>
+    	<p>investigate later since PHP is needed</p>
+    	&ltform&gt &lt/form&gt
+
+    	<h2>Color</h2>
+    	<ol>Attributes
+    		<li>bgcolor</li>
+    		<li>font color</li>
+    	</ol>
+    	<p>#FF0000</p>
+    	<p>Hexadecimal: from 0 to F</p>
+
+    	<p>
+    		Class 跟 ID 的比較
+
+			這兩者最大的不同，是在於 ID 選擇器在一個 HTML 文件中只能被使用一次，而 Class 選擇器在一個 HTML 文件中可以被使用多次。第二個不同的地方，是 ID 選擇器可以被 Javascript 中的 GetElementByID 函數所運用，而 Class 選擇器無法被 Javascript 運用到。
+
+			並沒有什麼固定的規則，來決定什麼時候要用 ID 及什麼時候要用 Class。我們的建議是盡量用 Class，因為這樣子最靈活 (同一個 HTML 文件可以利用這類的選擇器多次)。唯一的例外，是當你要用 Javascript 的 GetElementByID 函數時。在這個情況下，你就應該要用 ID。
+
+			Class 名稱及 ID 名稱都是對大小寫敏感的。舉例來說，.classone 及 .ClassOne 是代表兩個不同的 Class 選擇器。
+		</p>
+
+
+
+
+    </body>
+</html>

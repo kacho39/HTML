@@ -33,10 +33,10 @@
             .italic{ /* prevent abuse of <em> */
                 font-style: italic
             }
-            #span{
+            #span{ /* on-line 同軸 */
                 color:red;
             }
-            #div{
+            #div{ /* block */
                 background-color: rgb(230,230,230);
                 width: 200px; /* 可以用 %, */
                 height: 100px; 
@@ -243,6 +243,11 @@
         <h6 id="toBottom">Bottom</h6>
 
         <!--Javascript擺最底-->
-        <script></script> 
+        <script>
+            document.body.innerHTML = "Inconceivable!"; // 會rewrite body 嘅innerHTML with 果句string
+            var headingEl = document.getElementById("toBottom");
+            console.log(headingEl);
+            headingEl.innerHTML = "All about cat";
+        </script> 
     </body>
 </html>
