@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>My record of learning Korean</title>
+	</head>
+	<body>
+		<h1>My table of learning Korean</h1>
+
+		<form id="frm1" action="/KoreanTable.php">
+		  Korean name: <br>
+		  <input type="text" name="koreanName" value=""><br>
+
+		  Meaning: <br>
+		  <input type="text" name="meaning" value=""><br>
+
+		  Sentence: <br>
+		  <input type="text" name="sentence" value=""><br>
+
+		  <input type="button" onclick="myFunction()" value="Submit">
+		</form> <br>
+
+		<button onclick="getValue()">Get value</button>
+		<p id="demo"></p>
+
+		<table id="myTable" border="2">
+			<thead>
+				<tr>
+					<th>Date</th>
+					<th>Korean name</th>
+					<th>Meaning</th>
+					<th>Sentence</th>
+				</tr>
+			</thead>
+			<tbody>
+
+			</tbody>
+		</table>
+		<script>
+		function myFunction() {
+			document.getElementById("frm1").submit();
+		}
+
+		function getValue() {
+			var theForm = document.getElementById("frm1");
+			var text = "";
+			var i;
+			for (i = 0; i < theForm.length; i++) {
+				text += theForm.elements[i].value + "<br>";
+			}
+			document.getElementById("demo").innerHTML = text;
+		}
+		</script>
+	</body>
+</html>
