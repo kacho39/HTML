@@ -38,10 +38,10 @@ public class AWTDemo {
         c1.fill = GridBagConstraints.BOTH;  //  how the grid is filled
         c1.anchor = GridBagConstraints.CENTER;    //  location in grid
         /*          fill attribute
-            CENTER, EAST, NORTH, NORTHEAST, NORTHWEST, SOUTH, SOUTHEAST, SOUTHWEST, WEST
+                BOTH, HORIZONTAL, NONE, VERTICAL
         */
         /*          anchor attribute
-            BOTH, HORIZONTAL, NONE, VERTICAL
+            CENTER, EAST, NORTH, NORTHEAST, NORTHWEST, SOUTH, SOUTHEAST, SOUTHWEST, WEST
         */
 
 
