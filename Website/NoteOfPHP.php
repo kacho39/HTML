@@ -1,9 +1,9 @@
 <?php
+
 echo "This is a note for a person who have learnt Java, HTML and JavaScript"
 echo "Things repeated is excluded"
-?>
 
-<?php
+
 // single-line comment
 
 # single-line comment
@@ -12,28 +12,25 @@ echo "Things repeated is excluded"
 multiple-lines 
 comment block
 */
-?>
-<?php
+
 echo "Hello World!". "Alvin here"; // can use echo or print
-?>
 
-<?php  // variable
+  // variable
 $txt = "Hello world!";
-global $x, $y; // globalise it
+global $x, $y;	//	globalise it
 $x = 5;
-echo $x;   //print out the variable
-echo <br>;
+echo $x;	//	print out the variable
+echo <br>;	//	next line
 echo $y;
-var_dump($x);  //return the data type and value
-?>
+var_dump($x);  //	return the data type and value
 
-<?php /*   static keyword
+ /*   static keyword
 Normally, when a function is completed/executed, all of its variables are deleted. However, sometimes we want a local variable NOT to be deleted. We need it for a further job. So static is used. 
 */
 // static $x = 0;
-?>
 
-<?php  // Array
+
+	//	Array
 $fruit = array("apple", "orange", "banana");
 var_dump($x);
 echo count($fruit);
@@ -45,10 +42,10 @@ $age = array("Tom"=>"35", "Jerry"=>"20");
 // 2)
 $age['Tom'] = "35";
 $age['Jerry'] = "20";
-echo "Tom is " . $age['Tom'] . "years old."
-?>
+echo "Tom is " . $age['Tom'] . "years old.";
 
-<?php  // Object
+
+	//	Object
 class Car {
 	function Car() {
 		$this->model = "VW"
@@ -56,12 +53,11 @@ class Car {
 }
 //create an object
 $herbie = new Car();
-
 //show object properties
 echo $herbie->model;
-?>
 
-<?php  // String
+
+	//	String
 // get length
 echo strlen("Hello world!"); // outputs 12
 // count word
@@ -74,9 +70,9 @@ echo strpos("Hello world!", "world"); //outputs 6
 echo str_replace("world", "Dolly", "Hello world!") //outputs Hello Dolly!
 
 //href: https://www.w3schools.com/php/php_ref_string.asp
-?>
 
-<?php  // Constant
+
+	//	Constant
 // Using define function
 // define(name, value, case-insensitive)
 // global automatically
@@ -88,9 +84,9 @@ echo GREETING;
 //case-insensitive
 define("GREETING", "Welcome to W3SSchools.com!", true);
 echo greeting;
-?>
 
-<?php  //operators
+
+	//	operators
 $x == $y // equal    true if $x is equal to $y
 $x === $y // identical   true if $x is equal to $y and they are of the same type
 $x !== $y // not identical
@@ -102,9 +98,8 @@ $x xor $y // true if either $x or $y is true but not both
 
 //string operator
 $txt1 .= $txt2 // append $txt2 to $txt1
-?>
 
-<?php  // foreach loop
+  // foreach loop
 //  foreach ($array as $value) {
 //     code to be executed;
 //  }
@@ -113,9 +108,8 @@ $colors = array("red", "green", "blue", "yellow");
 foreach ($colors as $value) {
     echo "$value <br>";
 }
-?>
 
-<?php // sorting array
+	//	sorting array
 sort($color); // ascending order
 rsort($color); // descending order
 // for associative array
@@ -123,9 +117,8 @@ asort($age); // ascending according to value
 ksort($age); // ascending according to key
 arsort($age); // descending according to value
 krsort($age); //descending according to key
-?>
 
-<?php // Superglobals
+ // Superglobals
 /*
 $GLOBALS
 $_SERVER
@@ -138,3 +131,5 @@ $_COOKIE
 $_SESSION
 */
 // see https://www.w3schools.com/php/php_superglobals.asp
+
+?>
