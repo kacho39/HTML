@@ -45,14 +45,14 @@ public class GUIDemo1 {
         	for (int i = 0; i < 3; i++) {
         		JButton n2 = new JButton(buttonName[i]);
         		GridBagConstraints c2 = new GridBagConstraints();
-        		c1.gridx = i;	
-	        	c1.gridy = 1;
-	        	c1.gridwidth = 1;
-	        	c1.gridheight = 1;
-	        	c1.weightx = 0;	
-	        	c1.weighty = 0;
-	        	c1.fill = GridBagConstraints.BOTH;
-	        	c1.anchor = GridBagConstraints.CENTER;
+        		c2.gridx = i;	
+	        	c2.gridy = 1;
+	        	c2.gridwidth = 1;
+	        	c2.gridheight = 1;
+	        	c2.weightx = 0;	
+	        	c2.weighty = 0;
+	        	c2.fill = GridBagConstraints.BOTH;
+	        	c2.anchor = GridBagConstraints.CENTER;
 	        	frame.add(n2, c2);
         	}
 
