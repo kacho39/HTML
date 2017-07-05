@@ -1,0 +1,11 @@
+	//	Variables
+{{ foo.bar }}
+{{ foo['bar'] }}
+
+	//	Setting Variables
+{% set foo = 'foo' %}
+{% set foo = [1, 2] %}
+{% set foo = {'foo': 'bar'} %}
+	
+	//	Filters
+//Variables can be modified by filters

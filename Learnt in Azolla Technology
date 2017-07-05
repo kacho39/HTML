@@ -1,0 +1,12 @@
+Learnt in Azolla Technology
+//////////////////////////////////
+1st day 
+
+MVC
+Model: app/
+View: resources/view
+controller: app/Http/controllers
+routes: routes/web.php
+
+zip
+https://stackoverflow.com/questions/4914750/how-to-zip-a-whole-folder-using-php
