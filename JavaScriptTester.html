@@ -1,0 +1,24 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<p id='demo'></p>
+	</body>
+	<script type="text/javascript">
+		//	outputing with HTML
+		//	https://www.w3schools.com/js/js_output.asp
+
+		var myObj = { "name":"John", "age":31, "city":"New York" };
+		var myJSON = JSON.stringify(myObj);
+		var objReceived = JSON.parse(myJSON);
+
+		//	see in console
+		console.log(myObj);
+		console.log(myJSON);
+
+		//	print in an alert message
+		window.alert(objReceived);
+
+		document.getElementById('demo').innerHTML = myObj.name;
+	</script>
+</html>
